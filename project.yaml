@@ -8,14 +8,21 @@ metadata:
 spec:
   description: Production project
   sourceRepos:
-  - '*'
+    - "*"
   destinations:
-  - namespace: '*'
-    server: https://kubernetes.default.svc
+    - namespace: test
+      server: https://kubernetes.default.svc
   clusterResourceWhitelist:
-  - group: '*'
-    kind: '*'
+    - group: "*"
+      # kind: '*'
+      kind: Namespace
   namespaceResourceWhitelist:
-  - group: '*'
-    kind: '*'
-
+    - group: "*"
+      kind: "*"
+  namespaceResourceBlacklist:
+    - group: "*"
+      kind: ResourceQuota
+    - group: "*"
+      kind: LimitRange
+    - group: "*"
+      kind: NetworkPolicy

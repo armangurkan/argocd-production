@@ -8,16 +8,15 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: https://github.com/vfarcic/argocd-production.git
+    repoURL: https://github.com/armangurkan/argocd-production.git
     targetRevision: HEAD
     path: helm
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: test
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
     syncOptions:
-    - CreateNamespace=true
-
+      - CreateNamespace=true

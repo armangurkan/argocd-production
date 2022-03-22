@@ -19,7 +19,7 @@ spec:
           host: devopsparadox.com
       version: v3
   destination:
-    namespace: production
+    namespace: test
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
