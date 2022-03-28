@@ -14,9 +14,9 @@ spec:
     helm:
       values: |
         image:
-          tag: 2.9.17
+          tag: latest
         ingress:
-          host: devops-toolkit.localhost.com
+          host: devopsparadox.com
       version: v3
   destination:
     namespace: test
